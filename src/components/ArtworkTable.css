@@ -1,0 +1,324 @@
+/* ArtworkTable Component Styles */
+
+.artwork-table-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.artwork-table-header {
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.artwork-table-header h2 {
+    margin: 0 0 0.5rem 0;
+    color: #212529;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.artwork-table-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.table-stats p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+.selection-info {
+    color: #007bff !important;
+    font-weight: 500;
+    margin-top: 0.25rem !important;
+}
+
+.table-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.loading-indicator {
+    color: #007bff;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Loading State */
+.artwork-table-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+}
+
+.artwork-table-loading p {
+    margin-top: 1rem;
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* Error State */
+.artwork-table-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.artwork-table-error .p-message {
+    margin-bottom: 1rem;
+    max-width: 500px;
+}
+
+/* DataTable Customizations */
+.artwork-table {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.artwork-table .p-datatable-header {
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    padding: 1rem;
+}
+
+.artwork-table .p-datatable-thead>tr>th {
+    background: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.artwork-table .p-datatable-tbody>tr>td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e9ecef;
+    vertical-align: top;
+}
+
+.artwork-table .p-datatable-tbody>tr:hover {
+    background: #f8f9fa;
+}
+
+.artwork-table .p-datatable-tbody>tr.p-highlight {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+/* Column Content Styles */
+.artwork-title {
+    font-weight: 500;
+    color: #212529;
+}
+
+.artwork-title span {
+    display: block;
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.artwork-artist {
+    color: #495057;
+}
+
+.artwork-artist span {
+    display: block;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .artwork-table-container {
+        padding: 0 1rem;
+    }
+
+    .artwork-table-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .artwork-table .p-datatable-thead>tr>th,
+    .artwork-table .p-datatable-tbody>tr>td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .artwork-title span,
+    .artwork-artist span {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .artwork-table-header {
+        text-align: center;
+    }
+
+    .artwork-table-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .artwork-table .p-datatable-thead>tr>th,
+    .artwork-table .p-datatable-tbody>tr>td {
+        padding: 0.4rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Empty State */
+.artwork-table .p-datatable-emptymessage {
+    padding: 2rem;
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Loading Overlay */
+.artwork-table .p-datatable-loading-overlay {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.artwork-table .p-datatable-loading-icon {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+/* Pagination Styles */
+.artwork-table .p-paginator {
+    background: #f8f9fa;
+    border-top: 2px solid #dee2e6;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.artwork-table .p-paginator .p-paginator-pages .p-paginator-page {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    margin: 0 0.125rem;
+}
+
+.artwork-table .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.artwork-table .p-paginator .p-dropdown {
+    margin-left: 0.5rem;
+}
+
+.artwork-table .p-paginator .p-paginator-current {
+    color: #495057;
+    font-weight: 500;
+}
+
+/* Selection Styles */
+.artwork-table .p-selection-column {
+    width: 3rem;
+    text-align: center;
+}
+
+.artwork-table .p-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.artwork-table .p-checkbox .p-checkbox-box {
+    border: 2px solid #ced4da;
+    border-radius: 4px;
+    background: white;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.artwork-table .p-checkbox .p-checkbox-box.p-highlight {
+    border-color: #007bff;
+    background: #007bff;
+}
+
+.artwork-table .p-checkbox .p-checkbox-box .p-checkbox-icon {
+    color: white;
+    font-size: 0.75rem;
+}
+
+.artwork-table .p-datatable-tbody>tr.p-selectable-row:hover {
+    background: #f8f9fa;
+    cursor: pointer;
+}
+
+.artwork-table .p-datatable-tbody>tr.p-selectable-row.p-highlight {
+    background: #e3f2fd;
+}
+
+.artwork-table .p-datatable-tbody>tr.p-selectable-row.p-highlight:hover {
+    background: #bbdefb;
+}
+
+/* Select All Header Styles */
+.select-all-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-all-btn {
+    width: 2rem !important;
+    height: 2rem !important;
+    padding: 0 !important;
+    min-width: auto !important;
+}
+
+.select-all-btn .pi {
+    font-size: 1rem;
+    color: #495057;
+}
+
+.select-all-btn:hover .pi {
+    color: #007bff;
+}
+
+.select-all-btn:disabled .pi {
+    color: #ced4da;
+}
+
+/* Enhanced Table Actions Styles */
+.table-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.table-actions .p-button-sm {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.table-actions .p-button-outlined {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.table-actions .p-button-outlined:hover {
+    background: #007bff;
+    color: white;
+}
