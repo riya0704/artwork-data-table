@@ -77,3 +77,4 @@ The project is configured with:
 
 The application can be deployed to any static hosting service like Netlify, Cloudflare Pages, or similar platforms."# artwork-data-table" 
 # artwork-data-table
+# artwork-data-table
